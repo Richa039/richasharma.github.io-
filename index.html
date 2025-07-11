@@ -1,225 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Richa Sharma | Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      font-family: 'Poppins', sans-serif;
       background-color: #0b132b;
       color: white;
     }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    nav h1 {
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #ffffff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav ul li a:hover {
-      color: #1ecbe1;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 120px 30px 80px;
-      min-height: 100vh;
-      background: linear-gradient(to right, rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.8)),
-        url('richa.jpg') center/cover no-repeat;
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
       text-align: center;
     }
-
-    .hero h2 {
+    header h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
-      color: #ffffff;
+      color: #4faaff;
     }
-
-    .hero h3 {
-      font-size: 1.5rem;
-      color: #1ecbe1;
+    header p {
+      font-size: 1.2rem;
     }
-
-    .hero p {
-      max-width: 600px;
-      margin-top: 20px;
+    .hero {
+      background: url('profile.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero button {
+      padding: 10px 20px;
       font-size: 1rem;
-      color: #ddd;
-    }
-
-    .btn {
-      margin-top: 30px;
-      padding: 12px 30px;
-      background-color: #1ecbe1;
-      color: #000;
+      background: #4faaff;
       border: none;
-      font-weight: bold;
+      border-radius: 5px;
       cursor: pointer;
-      text-decoration: none;
+      color: white;
     }
-
     section {
       padding: 80px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
-
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
       text-align: center;
-      color: #1ecbe1;
+      font-size: 2.5rem;
+      color: #4faaff;
+      margin-bottom: 50px;
     }
-
-    .skills-grid {
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
+      gap: 40px;
     }
-
-    .skills-grid div {
-      text-align: center;
+    .skill-block {
+      flex: 1;
+      min-width: 280px;
     }
-
-    .skills-grid img {
-      width: 60px;
+    .progress {
+      margin-bottom: 20px;
     }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+    .progress p {
+      margin-bottom: 5px;
     }
-
-    .card {
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    .bar-bg {
+      background: #ddd;
+      height: 10px;
+      border-radius: 5px;
     }
-
-    .card h3 {
-      color: #1ecbe1;
+    .bar-fill {
+      height: 10px;
+      border-radius: 5px;
     }
-
+    .p95 { width: 95%; background: #f56b00; }
+    .p90 { width: 90%; background: #007acc; }
+    .p85 { width: 85%; background: #f3b400; }
+    .p80 { width: 80%; background: #4caf50; }
+    .p75 { width: 75%; background: #9c27b0; }
+    .p65 { width: 65%; background: #2196f3; }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #091121;
-      color: #999;
-    }
-
-    footer a {
-      color: #1ecbe1;
-      text-decoration: none;
+      padding: 30px;
+      background-color: #111;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-
-  <nav>
+  <header>
     <h1>Richa Sharma</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <p>Cybersecurity Engineer | Application & Cloud Security | Security Architecture</p>
+  </header>
 
-  <section class="hero">
-    <h2>Hello, I'm Richa</h2>
-    <h3>Cybersecurity Engineer</h3>
-    <p>Application Security | Cloud Security | Mobile & Firmware Testing | Secure Architecture</p>
-    <a href="#projects" class="btn">See My Work</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="text-align:center; max-width: 700px; margin:auto;">I’m an Application Security Engineer with over 4 years of experience in penetration testing, mobile app security, cloud assessments, and reviewing secure architectures. My work focuses on finding real-world flaws and fixing them through automation, engineering, and education.</p>
-  </section>
+  <div class="hero">
+    <h2>Hello, I'm Richa Sharma</h2>
+    <p>Application & Cloud Security | Penetration Testing | Firmware</p>
+    <button onclick="location.href='#skills'">See My Work</button>
+  </div>
 
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/python.png"/><p>Python</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/network-card.png"/><p>Burp Suite</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/cloud.png"/><p>AWS Lambda</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/wireshark.png"/><p>Wireshark</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/android-os.png"/><p>Mobile Security</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/print.png"/><p>Firmware Testing</p></div>
-      <div><img src="https://img.icons8.com/ios-filled/100/ffffff/architecture.png"/><p>Security Architecture</p></div>
+    <div class="skills-container">
+      <div class="skill-block">
+        <h3>My Skills and Experiences</h3>
+        <p>I’ve worked on cloud security automation, mobile app testing (iOS & Android), firmware security, penetration testing, and secure architecture reviews. Skilled in AWS, Python, Burp Suite, and MobSF. Led V&V initiatives at HP and developed Lambda-based monitoring tools.</p>
+      </div>
+      <div class="skill-block">
+        <div class="progress">
+          <p>Web Security Testing <span style="float:right;">95%</span></p>
+          <div class="bar-bg"><div class="bar-fill p95"></div></div>
+        </div>
+        <div class="progress">
+          <p>Cloud Security (AWS) <span style="float:right;">90%</span></p>
+          <div class="bar-bg"><div class="bar-fill p90"></div></div>
+        </div>
+        <div class="progress">
+          <p>Mobile App Testing <span style="float:right;">85%</span></p>
+          <div class="bar-bg"><div class="bar-fill p85"></div></div>
+        </div>
+        <div class="progress">
+          <p>Python & Automation <span style="float:right;">80%</span></p>
+          <div class="bar-bg"><div class="bar-fill p80"></div></div>
+        </div>
+        <div class="progress">
+          <p>Burp Suite & Proxy Tools <span style="float:right;">75%</span></p>
+          <div class="bar-bg"><div class="bar-fill p75"></div></div>
+        </div>
+        <div class="progress">
+          <p>Security Architecture <span style="float:right;">85%</span></p>
+          <div class="bar-bg"><div class="bar-fill p85"></div></div>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>OWASP Juice Shop Pentest</h3>
-        <p>Performed XSS, SQLi, and IDOR testing. Documented findings and mitigation steps. Used Burp Suite & ZAP.</p>
-      </div>
-      <div class="card">
-        <h3>Cloud Misconfig Scanner</h3>
-        <p>AWS Lambda + Python script to detect open ports & misconfigured security groups. Auto-alerts via email.</p>
-      </div>
-      <div class="card">
-        <h3>Android App Analysis</h3>
-        <p>Used MobSF and Frida to extract hardcoded secrets, analyze SSL pinning, and bypass login validation.</p>
-      </div>
-      <div class="card">
-        <h3>Printer Firmware V&V</h3>
-        <p>Led firmware review of embedded systems for HP printers. Verified third-party app compliance and memory safety.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p style="text-align:center;">📧 Email: <a href="mailto:richasharma@example.com">richasharma@example.com</a></p>
-    <p style="text-align:center;">🌐 GitHub: <a href="https://github.com/Richa039">github.com/Richa039</a></p>
-    <p style="text-align:center;">🔗 LinkedIn: <a href="https://linkedin.com/in/richasharma">linkedin.com/in/richasharma</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Richa Sharma | Portfolio</p>
+    <p>Connect with me: <a href="mailto:richasharma@example.com" style="color:#4faaff;">richasharma@example.com</a></p>
   </footer>
-
 </body>
 </html>
