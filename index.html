@@ -1,151 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Richa Sharma | Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0b132b;
-      color: white;
-    }
-    header {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #4faaff;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .hero {
-      background: url('profile.jpg') no-repeat center center/cover;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    .hero button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background: #4faaff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-    }
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #4faaff;
-      margin-bottom: 50px;
-    }
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-    }
-    .skill-block {
-      flex: 1;
-      min-width: 280px;
-    }
-    .progress {
-      margin-bottom: 20px;
-    }
-    .progress p {
-      margin-bottom: 5px;
-    }
-    .bar-bg {
-      background: #ddd;
-      height: 10px;
-      border-radius: 5px;
-    }
-    .bar-fill {
-      height: 10px;
-      border-radius: 5px;
-    }
-    .p95 { width: 95%; background: #f56b00; }
-    .p90 { width: 90%; background: #007acc; }
-    .p85 { width: 85%; background: #f3b400; }
-    .p80 { width: 80%; background: #4caf50; }
-    .p75 { width: 75%; background: #9c27b0; }
-    .p65 { width: 65%; background: #2196f3; }
-    footer {
-      text-align: center;
-      padding: 30px;
-      background-color: #111;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Richa Sharma</h1>
-    <p>Cybersecurity Engineer | Application & Cloud Security | Security Architecture</p>
-  </header>
+<section id="skills" style="background:#0a0a23; color:#fff; padding:60px 20px; font-family:sans-serif;">
+  <h2 style="text-align:center; font-size:2rem; margin-bottom:40px;">Coding Skills</h2>
+  <div style="max-width:800px; margin:auto;">
 
-  <div class="hero">
-    <h2>Hello, I'm Richa Sharma</h2>
-    <p>Application & Cloud Security | Penetration Testing | Firmware</p>
-    <button onclick="location.href='#skills'">See My Work</button>
-  </div>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-block">
-        <h3>My Skills and Experiences</h3>
-        <p>I’ve worked on cloud security automation, mobile app testing (iOS & Android), firmware security, penetration testing, and secure architecture reviews. Skilled in AWS, Python, Burp Suite, and MobSF. Led V&V initiatives at HP and developed Lambda-based monitoring tools.</p>
+    <div style="margin-bottom:25px;">
+      <div style="display:flex; justify-content:space-between;">
+        <strong>Application Security Testing</strong><span>95%</span>
       </div>
-      <div class="skill-block">
-        <div class="progress">
-          <p>Web Security Testing <span style="float:right;">95%</span></p>
-          <div class="bar-bg"><div class="bar-fill p95"></div></div>
-        </div>
-        <div class="progress">
-          <p>Cloud Security (AWS) <span style="float:right;">90%</span></p>
-          <div class="bar-bg"><div class="bar-fill p90"></div></div>
-        </div>
-        <div class="progress">
-          <p>Mobile App Testing <span style="float:right;">85%</span></p>
-          <div class="bar-bg"><div class="bar-fill p85"></div></div>
-        </div>
-        <div class="progress">
-          <p>Python & Automation <span style="float:right;">80%</span></p>
-          <div class="bar-bg"><div class="bar-fill p80"></div></div>
-        </div>
-        <div class="progress">
-          <p>Burp Suite & Proxy Tools <span style="float:right;">75%</span></p>
-          <div class="bar-bg"><div class="bar-fill p75"></div></div>
-        </div>
-        <div class="progress">
-          <p>Security Architecture <span style="float:right;">85%</span></p>
-          <div class="bar-bg"><div class="bar-fill p85"></div></div>
-        </div>
+      <div style="background:#ccc; height:10px; border-radius:5px;">
+        <div style="width:95%; background:#e74c3c; height:10px; border-radius:5px;"></div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p>Connect with me: <a href="mailto:richasharma@example.com" style="color:#4faaff;">richasharma@example.com</a></p>
-  </footer>
-</body>
-</html>
+    <div style="margin-bottom:25px;">
+      <div style="display:flex; justify-content:space-between;">
+        <strong>Mobile App Security</strong><span>90%</span>
+      </div>
+      <div style="background:#ccc; height:10px; border-radius:5px;">
+        <div style="width:90%; background:#2980b9; height:10px; border-radius:5px;"></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:25px;">
+      <div style="display:flex; justify-content:space-between;">
+        <strong>Cloud Security (AWS)</strong><span>85%</span>
+      </div>
+      <div style="background:#ccc; height:10px; border-radius:5px;">
+        <div style="width:85%; background:#f39c12; height:10px; border-radius:5px;"></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:25px;">
+      <div style="display:flex; justify-content:space-between;">
+        <strong>Firmware & Printer Security</strong><span>80%</span>
+      </div>
+      <div style="background:#ccc; height:10px; border-radius:5px;">
+        <div style="width:80%; background:#27ae60; height:10px; border-radius:5px;"></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:25px;">
+      <div style="display:flex; justify-content:space-between;">
+        <strong>Security Architecture</strong><span>90%</span>
+      </div>
+      <div style="background:#ccc; height:10px; border-radius:5px;">
+        <div style="width:90%; background:#8e44ad; height:10px; border-radius:5px;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
