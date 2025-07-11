@@ -1,193 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Richa Sharma | Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: #111;
-      color: #fff;
+      color: white;
+      background-color: #0b132b;
     }
 
-    header {
-      background: #007acc;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #00bfff;
-    }
-
-    .skills-container {
+    nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
     }
 
-    .skills-container div {
-      text-align: center;
+    nav h1 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ffffff;
     }
 
-    .skills-container img {
-      width: 60px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    nav ul {
+      list-style: none;
+      display: flex;
       gap: 30px;
     }
 
-    .card {
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      transition: transform 0.2s ease;
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    nav ul li a:hover {
+      color: #1ecbe1;
     }
 
-    .card h3 {
-      color: #00bfff;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 120px 60px 60px;
+      min-height: 100vh;
+      background: linear-gradient(to right, #0b132bcc, #0b132bcc),
+        url("data:image/png;base64,REPLACE_ME") center/cover no-repeat;
     }
 
-    ul {
-      padding-left: 20px;
+    .hero-text {
+      max-width: 50%;
     }
 
-    footer {
-      background: #1f1f1f;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
+    .hero-text h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
     }
 
-    footer a {
-      color: #00bfff;
+    .hero-text h3 {
+      font-size: 1.5rem;
+      color: #1ecbe1;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    .hero-text .btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #1ecbe1;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #091121;
+      color: #999;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Richa Sharma</h1>
-  <p>Application Security Engineer | Cloud Security | Mobile & Firmware Testing</p>
-</header>
+  <nav>
+    <h1>Richa Sharma</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am an experienced Application Security Engineer with a passion for identifying and remediating vulnerabilities in web, mobile, cloud, and embedded systems. I specialize in penetration testing, cloud security audits, mobile application assessments, and secure architecture reviews.</p>
-</section>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm Richa</h2>
+      <h3>Cybersecurity Engineer</h3>
+      <p>I specialize in application security, cloud security, mobile & firmware testing, and secure architecture design.</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/python.png" alt="Python">
-      <p>Python</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/network-card.png" alt="Burp Suite">
-      <p>Burp Suite</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/cloud.png" alt="AWS Lambda">
-      <p>AWS Lambda</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/wireshark.png" alt="Wireshark">
-      <p>Wireshark</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/android-os.png" alt="Mobile Security">
-      <p>Mobile App Security</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/print.png" alt="Printer/Firmware">
-      <p>Firmware Security</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/architecture.png" alt="Security Architecture">
-      <p>Security Architecture</p>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>OWASP Juice Shop Pentest</h3>
-      <p>Performed XSS, IDOR, SQLi testing and documented detailed remediations. Tools used: Burp Suite, ZAP.</p>
-    </div>
-    <div class="card">
-      <h3>Mobile App Reverse Engineering</h3>
-      <p>Analyzed APKs with MobSF and Jadx. Identified hardcoded secrets, insecure storage, and API weaknesses.</p>
-    </div>
-    <div class="card">
-      <h3>Printer Firmware Security</h3>
-      <p>Conducted V&V assessments on embedded printer software and third-party firmware for HP platforms.</p>
-    </div>
-    <div class="card">
-      <h3>Cloud Security Monitoring Tool</h3>
-      <p>Built AWS Lambda automation to detect open ports and misconfigured security groups using Boto3.</p>
-    </div>
-  </div>
-</section>
-
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li>AWS Certified Security – Specialty (In Progress)</li>
-    <li>Certified Ethical Hacker (CEH)</li>
-    <li>OWASP Top 10 Badge – Web Security Academy</li>
-    <li>Burp Suite Certified Practitioner (Planned)</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:richasharma@example.com">richasharma@example.com</a></p>
-  <p>GitHub: <a href="https://github.com/Richa039" target="_blank">github.com/Richa039</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/richasharma" target="_blank">linkedin.com/in/richasharma</a></p>
-</section>
-
-<footer>
-  <p>© 2025 Richa Sharma | Portfolio</p>
-</footer>
+  <footer>
+    <p>© 2025 Richa Sharma | Portfolio</p>
+  </footer>
 
 </body>
 </html>
