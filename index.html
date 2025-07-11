@@ -6,160 +6,169 @@
   <title>Richa Sharma | Cybersecurity Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      background-color: #0b0b20;
-      color: #fff;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Quicksand', sans-serif; color: #fff; background: #090a1a; }
+    
+    /* NAVIGATION */
     nav {
-      background-color: #3b63f3;
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(59,99,243,0.9); padding: 15px 0;
     }
-    nav div {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
+    nav .container { max-width: 1200px; margin:auto; display:flex; justify-content: space-between; align-items:center; padding: 0 20px; }
+    nav h1 { font-size:1.8rem; color:#fff; }
+    nav ul { display:flex; gap:30px; list-style:none; }
+    nav a { color:#fff; text-decoration:none; font-weight:500; }
+    nav a:hover { color:#cdf; }
+
+    /* HERO */
+    .hero {
+      background: url('images/richa.jpg') center/cover no-repeat;
+      height:100vh; position:relative;
+      display:flex; align-items:center; justify-content:center;
     }
-    nav h1 {
-      color: white;
-      font-size: 1.8rem;
+    .hero::after {
+      content:""; position:absolute; inset:0;
+      background:rgba(9,10,26,0.7);
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
+    .hero-content {
+      z-index:1; text-align:center; padding:20px;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
+    .hero-content img {
+      width:180px; height:180px; object-fit:cover;
+      border-radius:50%; border:4px solid #4faaff;
     }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 100px 20px 60px;
+    .hero-content h2 { font-size:2.5rem; margin-top:20px; }
+    .hero-content p { font-size:1.1rem; margin:10px 0; color:#ddd; }
+
+    .btn {
+      display:inline-block; padding:12px 28px; margin-top:20px;
+      background:#4faaff; color:#000; text-decoration:none; font-weight:bold;
+      border-radius:5px;
     }
-    #hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+
+    section { max-width:900px; margin:auto; padding:100px 20px; }
+    section h2 { font-size:2.2rem; margin-bottom:40px; text-align:center; color:#4faaff; }
+    section p, section li { font-size:1rem; line-height:1.6; margin-bottom:15px; }
+    section ul { list-style: disc inside; padding-left:20px; }
+
+    /* SKILLS */
+    .bar-group .bar { margin-bottom:25px; }
+    .bar { position:relative; background:#333; height:15px; border-radius:10px; }
+    .bar .label { position:absolute; left:0; top:-25px; font-weight:bold; }
+    .bar .fill { height:100%; border-radius:10px; position:relative; }
+    .bar .fill span {
+      position:absolute; right:10px; top:-24px; font-weight:bold; color:#eee;
     }
-    #hero img {
-      width: 200px;
-      border-radius: 100px;
-      margin-bottom: 20px;
+    .red { width:95%; background:#e74c3c; }
+    .blue { width:90%; background:#3498db; }
+    .orange { width:85%; background:#f39c12; }
+    .green { width:80%; background:#27ae60; }
+    .purple { width:90%; background:#9b59b6; }
+
+    /* PROJECTS CARDS */
+    .projects { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:30px; }
+    .card {
+      background:#1a1a2e; padding:20px; border-radius:10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3); transition: transform .2s;
     }
-    .bar {
-      background: #ccc;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 20px;
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { color:#4faaff; margin-bottom:10px; }
+    .card p { font-size:0.95rem; margin-bottom:15px; }
+    .card a {
+      color:#cdf; text-decoration:none; font-weight:bold;
     }
-    .bar span {
-      display: block;
-      padding: 10px;
-      color: #fff;
-      font-weight: bold;
-    }
-    .html { background: linear-gradient(to right, #e44d26 95%, #ccc 5%); }
-    .c { background: linear-gradient(to right, #007acc 90%, #ccc 10%); }
-    .dbms { background: linear-gradient(to right, #f0ad4e 85%, #ccc 15%); }
-    .java { background: linear-gradient(to right, #28a745 80%, #ccc 20%); }
-    .python { background: linear-gradient(to right, #6c757d 65%, #ccc 35%); }
-    .ux { background: linear-gradient(to right, #28a745 85%, #ccc 15%); }
+    .card a:hover { text-decoration:underline; }
+
     footer {
-      background-color: #3b63f3;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      background:#3b63f3; text-align:center; padding:20px;
+      position: relative;
     }
+    footer a { color:#cdf; text-decoration:none; }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div>
-      <h1>RICHA</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">My Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <div id="hero">
-      <img src="your-photo.jpg" alt="Richa Sharma">
-      <h2>Hello, I'm Richa Sharma</h2>
-      <p>Cybersecurity Engineer | Penetration Tester | Cloud Security Specialist</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a cybersecurity engineer with 4+ years of experience in application, cloud, and mobile security. My background includes penetration testing, secure architecture reviews, red teaming, and automating security tools. I’ve worked at HP Inc. and pursued a Master’s in Cybersecurity at Texas A&M University.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="bar html"><span>HTML, CSS, JavaScript - 95%</span></div>
-    <div class="bar c"><span>C, C++ - 90%</span></div>
-    <div class="bar dbms"><span>DBMS - 85%</span></div>
-    <div class="bar java"><span>Java - 80%</span></div>
-    <div class="bar python"><span>Python - 65%</span></div>
-    <div class="bar ux"><span>UI/UX Designing - 85%</span></div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Services</h2>
+<nav>
+  <div class="container">
+    <h1>RICHA</h1>
     <ul>
-      <li>Application Security Testing (Web, Mobile, Desktop)</li>
-      <li>Cloud Security Assessments (AWS)</li>
-      <li>Printer and Firmware Security</li>
-      <li>Secure Architecture Review</li>
-      <li>Security Automation using Python and AWS Lambda</li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">My Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </div>
+</nav>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>MobSF Enterprise Integration:</strong> Customized MobSF with LDAP and PostgreSQL for secure enterprise deployments.</li>
-      <li><strong>AWS Port Monitor:</strong> Built a Lambda-based security automation to detect misconfigured security groups.</li>
-      <li><strong>Log4j Red Team Findings:</strong> Conducted red teaming and identified Log4j RCE and exposed AWS services.</li>
-    </ul>
-  </section>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <img src="images/richa.jpg" alt="Richa Sharma">
+    <h2>Hello, I'm Richa Sharma</h2>
+    <p>Cybersecurity Engineer | AppSec, Cloud, Mobile, Firmware Security</p>
+    <a href="#skills" class="btn">See My Work</a>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: richasharma@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/richasharma" style="color:#3b63f3;">linkedin.com/in/richasharma</a></p>
-    <p>GitHub: <a href="https://github.com/richa039" style="color:#3b63f3;">github.com/richa039</a></p>
-  </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a cybersecurity engineer with 4+ years experience in application, cloud, mobile & firmware security. I've led V&V at HP Inc., built automated AWS Lambda tools, and passed my Master’s in Cybersecurity at Texas A&M University.</p>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Richa Sharma | Cybersecurity Portfolio</p>
-  </footer>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="bar-group">
+    <div class="bar"><span class="label">Application Security Testing</span><div class="fill red"><span>95%</span></div></div>
+    <div class="bar"><span class="label">Mobile App Security</span><div class="fill blue"><span>90%</span></div></div>
+    <div class="bar"><span class="label">Cloud Security (AWS)</span><div class="fill orange"><span>85%</span></div></div>
+    <div class="bar"><span class="label">Firmware & Printer Security</span><div class="fill green"><span>80%</span></div></div>
+    <div class="bar"><span class="label">Security Architecture</span><div class="fill purple"><span>90%</span></div></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Application Security Testing (Web, Mobile, Desktop)</li>
+    <li>Cloud Security Assessments (AWS)</li>
+    <li>Printer & Firmware Security Review</li>
+    <li>Secure Architecture Design</li>
+    <li>Security Automation with Python & AWS Lambda</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>MobSF Enterprise Integration</h3>
+      <p>Customized MobSF for enterprise with LDAP and PostgreSQL.</p>
+      <a href="https://github.com/Richa039">View Project →</a>
+    </div>
+    <div class="card">
+      <h3>AWS Port Monitor</h3>
+      <p>Lambda-based tool to detect misconfigured security groups and send alerts.</p>
+      <a href="https://github.com/Richa039">View Project →</a>
+    </div>
+    <div class="card">
+      <h3>Log4j Red Team Findings</h3>
+      <p>Performed red team test, uncovered Log4j RCE and misconfigured AWS services.</p>
+      <a href="https://github.com/Richa039">View Project →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:richasharma@example.com">richasharma@example.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/richasharma">linkedin.com/in/richasharma</a></p>
+  <p>GitHub: <a href="https://github.com/Richa039">github.com/Richa039</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Richa Sharma | Cybersecurity Portfolio</p>
+</footer>
+
 </body>
 </html>
