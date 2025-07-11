@@ -2,32 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Richa Sharma | AppSec Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richa Sharma | Cybersecurity Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --accent: #007acc;
-      --bg: #f7f9fc;
-      --text: #2d2d2d;
-    }
-
     body {
-      font-family: 'Quicksand', sans-serif;
       margin: 0;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: 'Quicksand', sans-serif;
+      background: #111;
+      color: #fff;
     }
 
     header {
-      background: var(--accent);
-      color: white;
-      padding: 60px 20px;
+      background: #007acc;
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
     }
 
@@ -37,33 +30,44 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      font-size: 1.6rem;
-      border-left: 6px solid var(--accent);
-      padding-left: 10px;
-      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #00bfff;
     }
 
-    ul {
-      padding-left: 20px;
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .skills-container div {
+      text-align: center;
+    }
+
+    .skills-container img {
+      width: 60px;
     }
 
     .projects {
       display: grid;
-      gap: 20px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
     .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      background: #1c1c1c;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
       transition: transform 0.2s ease;
     }
 
@@ -72,29 +76,27 @@
     }
 
     .card h3 {
-      margin-top: 0;
-      color: var(--accent);
+      color: #00bfff;
     }
 
-    a {
-      color: var(--accent);
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background: #1f1f1f;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #00bfff;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
-    }
-
-    footer {
-      background: #1f1f1f;
-      color: #ddd;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #f0f0f0;
     }
   </style>
 </head>
@@ -102,23 +104,46 @@
 
 <header>
   <h1>Richa Sharma</h1>
-  <p>Application Security Engineer | Penetration Tester | DevSecOps</p>
+  <p>Application Security Engineer | Cloud Security | Mobile & Firmware Testing</p>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I'm an Application Security Engineer with over 4 years of experience in penetration testing, mobile app security, cloud architecture reviews, and automating security pipelines. I love breaking things ethically and helping secure them even better.</p>
+  <p>I am an experienced Application Security Engineer with a passion for identifying and remediating vulnerabilities in web, mobile, cloud, and embedded systems. I specialize in penetration testing, cloud security audits, mobile application assessments, and secure architecture reviews.</p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <ul>
-    <li><strong>Web & API Security:</strong> OWASP Top 10, Burp Suite, Postman, ZAP</li>
-    <li><strong>Mobile App Security:</strong> MobSF, Frida, Jadx, APKTool</li>
-    <li><strong>DevSecOps:</strong> CI/CD security, SAST/DAST, GitHub Actions</li>
-    <li><strong>Cloud:</strong> AWS IAM, S3, Lambda, Security Groups, WAF</li>
-    <li><strong>Languages:</strong> Python, Bash, JavaScript</li>
-  </ul>
+  <div class="skills-container">
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/python.png" alt="Python">
+      <p>Python</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/network-card.png" alt="Burp Suite">
+      <p>Burp Suite</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/cloud.png" alt="AWS Lambda">
+      <p>AWS Lambda</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/wireshark.png" alt="Wireshark">
+      <p>Wireshark</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/android-os.png" alt="Mobile Security">
+      <p>Mobile App Security</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/print.png" alt="Printer/Firmware">
+      <p>Firmware Security</p>
+    </div>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/architecture.png" alt="Security Architecture">
+      <p>Security Architecture</p>
+    </div>
+  </div>
 </section>
 
 <section id="projects">
@@ -126,19 +151,19 @@
   <div class="projects">
     <div class="card">
       <h3>OWASP Juice Shop Pentest</h3>
-      <p>Performed XSS, IDOR, SQLi discovery with detailed writeups and fixes. Used Burp Suite and custom scripts for enumeration.</p>
+      <p>Performed XSS, IDOR, SQLi testing and documented detailed remediations. Tools used: Burp Suite, ZAP.</p>
     </div>
     <div class="card">
       <h3>Mobile App Reverse Engineering</h3>
-      <p>Used MobSF, Jadx, and Frida to analyze insecure storage, API key leaks, and bypass SSL pinning in test APKs.</p>
+      <p>Analyzed APKs with MobSF and Jadx. Identified hardcoded secrets, insecure storage, and API weaknesses.</p>
     </div>
     <div class="card">
-      <h3>Security Header Checker (AWS)</h3>
-      <p>Python + Lambda tool to detect missing CSP, HSTS headers across multiple internal applications. Sends alerts via SES.</p>
+      <h3>Printer Firmware Security</h3>
+      <p>Conducted V&V assessments on embedded printer software and third-party firmware for HP platforms.</p>
     </div>
     <div class="card">
-      <h3>CI/CD AppSec Pipeline</h3>
-      <p>Integrated OWASP ZAP into GitHub Actions to perform dynamic scans on PRs. Included custom rules and Slack alerts.</p>
+      <h3>Cloud Security Monitoring Tool</h3>
+      <p>Built AWS Lambda automation to detect open ports and misconfigured security groups using Boto3.</p>
     </div>
   </div>
 </section>
@@ -148,6 +173,7 @@
   <ul>
     <li>AWS Certified Security – Specialty (In Progress)</li>
     <li>Certified Ethical Hacker (CEH)</li>
+    <li>OWASP Top 10 Badge – Web Security Academy</li>
     <li>Burp Suite Certified Practitioner (Planned)</li>
   </ul>
 </section>
@@ -160,7 +186,7 @@
 </section>
 
 <footer>
-  <p>© 2025 Richa Sharma. All rights reserved.</p>
+  <p>© 2025 Richa Sharma | Portfolio</p>
 </footer>
 
 </body>
